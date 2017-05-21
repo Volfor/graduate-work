@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[a4paper, 14pt]{extreport}
 \usepackage{subfiles} % Multi-file setup support
 \usepackage[cm]{fullpage}
 \usepackage[utf8]{inputenc}  % Ukrainian support
@@ -16,19 +16,31 @@
 
 \geometry{
  a4paper,
- left=15mm,
+ left=25mm,
  right=15mm,
- top=15mm,
- bottom=25mm,
+ top=20mm,
+ bottom=20mm,
 }
 
+% Format settings
 \renewcommand{\baselinestretch}{1.5}
+
+% Caption formatting begin
+\renewcommand{\tablename}{Таблиця}
+\DeclareCaptionLabelSeparator{hyphen}{ - }
+\captionsetup[table]{labelformat=simple, labelsep=hyphen}
+% Caption formatting end
 
 % Title formats begin
 \titleformat{\chapter}[block]
   {\centering\normalfont\huge\bfseries}{\thechapter.}{1em}{\Huge}
 \titlespacing*{\chapter}{0pt}{-19pt}{20pt}
 % Title formats end
+
+% Definitions styling begin
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+% Definitions styling end
 
 % Table heading format begin
 \renewcommand\theadfont{\bfseries\sffamily}
