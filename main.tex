@@ -1,0 +1,36 @@
+\documentclass{report}
+\usepackage{subfiles} % Multi-file setup support
+\usepackage[cm]{fullpage}
+\usepackage[utf8]{inputenc}  % Ukrainian support
+\usepackage[ukrainian]{babel}  % Ukrainian support
+\usepackage{titlesec} % Page titles formatting support
+\usepackage{indentfirst} % Indent first paragraph of each chapter
+\usepackage{geometry} % Page margins formatting support
+\usepackage{amsthm} % Definition styles support
+\usepackage{makecell} % Table cell formatting support
+\usepackage{caption} % Table captions
+\usepackage{float} % Figure placing fix
+
+\geometry{
+ a4paper,
+ left=15mm,
+ right=15mm,
+ top=15mm,
+ bottom=25mm,
+}
+
+\renewcommand{\baselinestretch}{1.5}
+
+% Title formats begin
+\titleformat{\chapter}[block]
+  {\centering\normalfont\huge\bfseries}{\thechapter.}{1em}{\Huge}
+\titlespacing*{\chapter}{0pt}{-19pt}{20pt}
+% Title formats end
+
+% Table heading format begin
+\renewcommand\theadfont{\bfseries\sffamily}
+% Table heading format end
+
+\begin{document}
+
+\end{document}
