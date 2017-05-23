@@ -3,7 +3,7 @@
 \usepackage{subfiles} % Multi-file setup support
 \usepackage[cm]{fullpage}
 \usepackage{amsmath,amsthm,amssymb} % Ukrainian support
-\usepackage[T1,T2A]{fontenc} % Ukrainian support
+\usepackage[T1, T2A]{fontenc} % Ukrainian support
 \usepackage[utf8]{inputenc}  % Ukrainian support
 \usepackage[english, russian, ukrainian]{babel}  % Ukrainian support
 \usepackage{titlesec} % Page titles formatting support
@@ -22,6 +22,11 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 % Graphics support end
+
+% Bibliography setup begin
+\usepackage{biblatex} % Bibliography
+\addbibresource{main.bib} % Bibliography resource
+% Bibliography setup end
 
 \geometry{
  a4paper,
@@ -98,5 +103,8 @@
 \subfile{sections/0_intro}
 \subfile{sections/1}
 \subfile{sections/2}
+\subfile{sections/3}
+
+\printbibliography
 
 \end{document}
