@@ -71,6 +71,7 @@
 
 % Caption formatting begin
 \renewcommand{\tablename}{Таблиця}
+\renewcommand{\figurename}{Рисунок} % TODO не~знаю чому, але перевизначення тут не~працює, зроблене ще~раз вже після begin document
 \DeclareCaptionLabelSeparator{hyphen}{ --- }
 \captionsetup[table]{labelformat=simple, labelsep=hyphen}
 \captionsetup[figure]{labelsep=hyphen, justification=centering}
@@ -97,10 +98,20 @@
 \newtheorem{definition}{Definition}[section]
 % Definitions styling end
 
+\widowpenalty=9999 % mainly prevents situations when only last line of paragraph goes to next page, but in emergency situations it's still allowed
+\clubpenalty=9999 % mainly prevents situations when only first line of paragraph remains on current page but all others go to next page, but in emergency situations it's still allowed
+
+
+\newenvironment{tableJustNowSureWholeOnSamePage}{\vspace{0.5\baselineskip plus 0.5\baselineskip}\noindent\begin{minipage}{\textwidth}\begin{center}}{\end{center}\end{minipage}\par\vspace{0.5\baselineskip plus 0.5\baselineskip}}
+
 \begin{document}
+
+\renewcommand{\figurename}{Рисунок} % TODO не~знаю чому, але перевизначення, зроблене раніше, не~працює, тому роблю аж тут ще~раз
+
 
 \subfile{sections/title}
 \addtocounter{page}{1}
+\subfile{sections/annotation}
 \tableofcontents
 \subfile{sections/0_intro}
 \subfile{sections/1}
