@@ -176,21 +176,27 @@ Material Design грунтується на чотирьох основних п
 	\label{figure:main_screen}
 \end{figure}
 
-Для відображення 
+Для оформлення елементів списку записів щоденника та списку записів планувальника було використано картку (\textit{Card}), що також є компонентом матеріального дизайну. Картка повинна мати закруглені кути та може містити фото, текст чи частину контенту. \textit{Floating Action Button} на даних екранах призначена для створення нового запису.
 
+%TODO: add screen with reminder list
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{diarylist_screen}
-	\caption{Diary list screen}
+	\caption{Екран зі списком записів щоденника}
 	\label{figure:diary_list_screen}
 \end{figure}
+
+Для відображення карти було використано компонент \textit{MapView}. На ній показується записаний трек переміщень та місця, в яких було зроблено записи до щоденника, чи встановлено нагадування.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{map_screen}
-	\caption{Map screen}
+	\caption{Карта з треком переміщень та мітками}
 	\label{figure:map_screen}
 \end{figure}
+
+Для навігації між щоденником подорожі, планувальником та картою було використано компонент матеріального дизайну \textit{Tabs}. Він дозволяє легко перемикатися між різними фрагментами інтерфейсу. Для глобальної навігації між подорожами, записами щоденника та планувальнка використано компонент \textit{Navigation Drawer}, він показується при слайді зліва та містить пункти навігації для додатку. 
+%TODO: add ref to additions
 
 \subsection{Опис розробки програмних компонентів}
 
