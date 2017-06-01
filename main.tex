@@ -26,6 +26,14 @@
 
 % Bibliography setup begin
 \usepackage{biblatex} % Bibliography
+\DefineBibliographyStrings{ukrainian}{
+	bibliography = {Список використаних джерел},
+	andothers = {та ін},
+	volume = {том},
+	page = {ст.},
+	and = {та}, 
+	in = {в}
+}
 \addbibresource{main.bib} % Bibliography resource
 % Bibliography setup end
 
@@ -127,6 +135,6 @@
 \subfile{sections/4}
 \subfile{sections/conclusion}
 
-\printbibliography
+\printbibliography \addcontentsline{toc}{chapter}{Список використаних джерел}
 
 \end{document}
