@@ -31,10 +31,11 @@
 
 \geometry{
  a4paper,
+ includeheadfoot,
  left=25mm,
  right=15mm,
- top=20mm,
- bottom=20mm, %TODO: in fact about 15mm
+ top=15mm,
+ bottom=15mm, %TODO: in fact about 15mm
 }
 
 % Format settings
@@ -68,6 +69,9 @@
 
 \usepackage[figure,table]{totalcount}
 % Additional content counting end
+
+% Remove list margins
+\setlist{nosep}
 
 % Caption formatting begin
 \renewcommand{\tablename}{Таблиця}
