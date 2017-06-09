@@ -79,8 +79,8 @@
 \usepackage[figure,table]{totalcount}
 % Additional content counting end
 
-% Remove list margins
-\setlist{nosep, labelwidth=\parindent, labelindent=0.5em, leftmargin=0em, style=standard}
+% Remove list vertical spacing and set left margin
+\setlist{nosep, labelwidth=\parindent, labelindent=\labelsep, leftmargin=0em, style=standard}
 
 % Caption formatting begin
 \renewcommand{\tablename}{Таблиця}
@@ -128,6 +128,16 @@
 
 \renewcommand{\tablename}{Таблиця}
 \renewcommand{\figurename}{Рисунок} % TODO не~знаю чому, але перевизначення, зроблене раніше, не~працює, тому роблю аж тут ще~раз
+
+\begin{enumerate}    
+	\item List 1
+	
+	\begin{itemize}[label={--}]
+		\item sub list 1
+		\item sub list 2	
+	\end{itemize}
+	
+\end{enumerate}
 
 %TODO: change chaptes and sections text
 \subfile{sections/title}
